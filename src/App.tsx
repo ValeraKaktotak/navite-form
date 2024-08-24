@@ -33,7 +33,7 @@ function App() {
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const isWrong = errors.email !== user.email || errors.password !== user.password;
+    const isWrong = formValue.email !== user.email || formValue.password !== user.password;
     setIsLoading(true);
     await wait();
     setIsLoading(false);
